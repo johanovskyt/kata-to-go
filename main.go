@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/johanovskyt/kata-to-go/internal/codewars"
+	"github.com/johanovskyt/kata-to-go/internal/project"
 	"github.com/urfave/cli/v3"
 )
 
@@ -34,7 +35,13 @@ func newProject(ctx context.Context, command *cli.Command) error {
 		return err
 	}
 
-	fmt.Println(kata)
+	generator := project.NewGenerator()
+	basePath := command.StringArg("path")
+	if err := generator.Create(kata, basePath); err != nil {
+		return err
+	}
+
+	fmt.Printf("Project created successfully at %s/%s\n", basePath, kata.Slug)
 
 	return nil
 }
