@@ -28,9 +28,14 @@ func main() {
 }
 
 func newProject(ctx context.Context, command *cli.Command) error {
+	id := command.StringArg("id")
+	if id == "" {
+		return fmt.Errorf("id argument is required")
+	}
+
 	client := codewars.NewClient()
 
-	kata, err := client.GetKata(ctx, command.StringArg("id"))
+	kata, err := client.GetKata(ctx, id)
 	if err != nil {
 		return err
 	}
