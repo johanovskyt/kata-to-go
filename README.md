@@ -7,13 +7,13 @@ A CLI tool to quickly bootstrap Go projects for Codewars kata challenges.
 ### Install from source
 
 ```bash
-go install github.com/tomasjohanovsky/kata-to-go@latest
+go install github.com/johanovskyt/kata-to-go@latest
 ```
 
 ### Build locally
 
 ```bash
-git clone https://github.com/tomasjohanovsky/kata-to-go.git
+git clone https://github.com/johanovskyt/kata-to-go.git
 cd kata-to-go
 go install
 ```
