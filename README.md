@@ -23,13 +23,13 @@ go install
 Create a new kata project by providing the kata ID and target directory:
 
 ```bash
-kata-to-go new <kata-id> <path>
+kata-to-go <kata-id> <path>
 ```
 
 **Example:**
 
 ```bash
-kata-to-go new 5270d0d18625160ada0000e4 ./my-katas
+kata-to-go 5270d0d18625160ada0000e4 ./my-katas
 ```
 
 ## License
